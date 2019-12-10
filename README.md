@@ -5,7 +5,9 @@
 </p>
 
 <p align="center">
-    [![Netlify Status](https://api.netlify.com/api/v1/badges/f48bbfbc-8805-47a0-92de-6feb46c45b63/deploy-status)](https://app.netlify.com/sites/reverent-morse-0273e7/deploys)
+  <a href="https://app.netlify.com/sites/reverent-morse-0273e7/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/f48bbfbc-8805-47a0-92de-6feb46c45b63/deploy-status" alt="Netlify Status" />
+  </a>
 </p>
 
 My first personal site built with [Gatsby](https://www.gatsbyjs.org/) and hosted with [Netlify](https://www.netlify.com/).
