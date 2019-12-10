@@ -4,6 +4,10 @@
   <img src="src/images/logo.png">
 </p>
 
+<p align="center">
+    [![Netlify Status](https://api.netlify.com/api/v1/badges/f48bbfbc-8805-47a0-92de-6feb46c45b63/deploy-status)](https://app.netlify.com/sites/reverent-morse-0273e7/deploys)
+</p>
+
 My first personal site built with [Gatsby](https://www.gatsbyjs.org/) and hosted with [Netlify](https://www.netlify.com/).
 
 > I do not own this design, please check out the original creator [Brittany Chiang](https://brittanychiang.com/).
