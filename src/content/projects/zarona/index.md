@@ -2,7 +2,7 @@
 date: '2018-04-05'
 title: 'zarona'
 cover: './zarona.png'
-github: 'https://github.com/bchiang7/google-keep-vue-firebase'
+github: 'https://github.com/nabilfarhann'
 external: 'https://zarona.herokuapp.com/'
 tech:
   - PHP
