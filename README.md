@@ -24,16 +24,16 @@ My first personal site built with [Gatsby](https://www.gatsbyjs.org/) and hosted
     npm install
     ```
 
-2.  **Build Gatsby**
-
-    ```sh
-    gatsby build
-    ```
-
-3.  **Install dependencies**
+2.  **Install dependencies**
 
     ```sh
     yarn install
+    ```
+
+3.  **Build Gatsby**
+
+    ```sh
+    gatsby build
     ```
 
 4.  **Start the development server**
