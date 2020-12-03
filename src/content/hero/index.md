@@ -1,8 +1,8 @@
 ---
 title: 'Hi, my name is'
 name: 'Nabil Farhan'
-subtitle: 'Web / Mobile App Developer'
+subtitle: 'Full-stack Developer'
 contactText: 'Get In Touch'
 ---
 
-I'm a final year undergraduate computer science student at [Multimedia University, Cyberjaya](https://www.mmu.edu.my/). I'm majoring in software engineering and interested in Web, Software and Mobile Development.
+I'm a full-time full-stack developer at [SUBPLACE](https://subplace.com/). I have a bachelor in computer science, majoring in software engineering and interested in Web, Software and Mobile Development.
