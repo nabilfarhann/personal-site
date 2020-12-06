@@ -40,7 +40,7 @@ const Subtitle = styled.h3`
   color: ${colors.spotifyblack};
   ${media.desktop`font-size: 70px;`};
   ${media.tablet`font-size: 60px;`};
-  ${media.phablet`font-size: 45px;`};
+  ${media.phablet`font-size: 44px;`};
   ${media.phone`font-size: 39px;`};
 `;
 const Blurb = styled.div`
