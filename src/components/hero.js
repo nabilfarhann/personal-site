@@ -41,9 +41,10 @@ const Subtitle = styled.h3`
   ${media.desktop`font-size: 70px;`};
   ${media.tablet`font-size: 60px;`};
   ${media.phablet`font-size: 50px;`};
-  ${media.phone`font-size: 40px;`};
+  ${media.phone`font-size: 39px;`};
 `;
 const Blurb = styled.div`
+  text-align: justify;
   margin-top: 25px;
   width: 50%;
   max-width: 820px;

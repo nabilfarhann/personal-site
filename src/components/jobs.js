@@ -50,7 +50,6 @@ const Tab = styled.button`
     text-align: center;
     border-left: 0;
     border-bottom: 2px solid ${colors.darkGrey};
-    min-width: 120px;
   `};
   &:hover,
   &:focus {
