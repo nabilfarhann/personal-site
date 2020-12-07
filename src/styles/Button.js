@@ -3,9 +3,9 @@ import theme from './theme';
 const { colors, fontSizes, fonts } = theme;
 
 const Button = styled.button`
-  color: ${colors.redd};
+  color: var(--themeColor);
   background-color: transparent;
-  border: 1px solid ${colors.redd};
+  border: 1px solid var(--themeColor);
   border-radius: ${theme.borderRadius};
   font-size: ${fontSizes.smallish};
   font-family: ${fonts.SFMono};

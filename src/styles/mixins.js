@@ -31,7 +31,7 @@ const mixins = {
     &:hover,
     &:active,
     &:focus {
-      color: ${colors.redd};
+      color: var(--textSlate);
       outline: 0;
     }
   `,
@@ -43,11 +43,11 @@ const mixins = {
     position: relative;
     transition: ${theme.transition};
     cursor: pointer;
-    color: ${colors.redd};
+    color: var(--textSlate);
     &:hover,
     &:focus,
     &:active {
-      color: ${colors.redd};
+      color: var(--textSlate);
       outline: 0;
       &:after {
         width: 100%;
@@ -60,15 +60,15 @@ const mixins = {
       height: 1px;
       position: relative;
       bottom: 0.37em;
-      background-color: ${colors.redd};
+      background-color: var(--themeColor);
       transition: ${theme.transition};
     }
   `,
 
   smallButton: css`
-    color: ${colors.redd};
+    color: var(--textSlate);
     background-color: transparent;
-    border: 1px solid ${colors.redd};
+    border: 1px solid var(--themeColor);
     border-radius: ${theme.borderRadius};
     padding: 12px 17px;
     font-size: ${fontSizes.smallish};
@@ -88,9 +88,9 @@ const mixins = {
   `,
 
   bigButton: css`
-    color: ${colors.redd};
+    color: var(--themeColor);
     background-color: transparent;
-    border: 1px solid ${colors.redd};
+    border: 1px solid var(--themeColor);
     border-radius: ${theme.borderRadius};
     padding: 18px 23px;
     font-size: ${fontSizes.small};

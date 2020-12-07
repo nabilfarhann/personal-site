@@ -31,6 +31,11 @@ const theme = {
     lightbluee: '#b1d4e5', //before #b1d4e5
     spotifyblack: '#191414',
     projectscolor: '#333333',
+    darkThemeMain: 'hsl(210deg, 30%, 8%)',
+    darkThemeText: '#FFFFFF',
+    darkThemeSlate: '#e43f5a',
+    darkThemeProject: '#CD3850',
+    darkThemeLightSlate: '#ff6363',
   },
 
   fonts: {

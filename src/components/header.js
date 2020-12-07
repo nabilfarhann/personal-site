@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
@@ -12,13 +13,15 @@ import { IconLogo } from './icons';
 import styled from 'styled-components';
 import { theme, mixins, media, Nav } from '../styles';
 const { colors, fontSizes, fonts } = theme;
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSun, faMoon } from '@fortawesome/fontawesome-free-solid';
 
 const HeaderContainer = styled.header`
   ${mixins.flexBetween};
   position: fixed;
   top: 0;
   padding: 0px 50px;
-  background-color: ${colors.almostblack};
+  background-color: var(--bg);
   transition: ${theme.transition};
   z-index: 11;
   filter: none !important;
@@ -38,7 +41,7 @@ const HeaderContainer = styled.header`
 const Navbar = styled(Nav)`
   ${mixins.flexBetween};
   font-family: ${fonts.SFMono};
-  color: ${colors.lightestSlate};
+  color: var(--textSlate);
   counter-reset: item 0;
   position: relative;
   z-index: 12;
@@ -47,7 +50,7 @@ const Logo = styled.div`
   ${mixins.flexCenter};
 `;
 const LogoLink = styled(Link)`
-  color: ${colors.redd};
+  color: var(--themeColor);
   width: 42px;
   height: 42px;
   &:hover,
@@ -72,7 +75,7 @@ const Hamburger = styled.div`
   transition-duration: 0.15s;
   transition-property: opacity, filter;
   text-transform: none;
-  color: inherit;
+  color: var(--textSlate);
   border: 0;
   background-color: transparent;
   display: none;
@@ -85,7 +88,7 @@ const HamburgerBox = styled.div`
   height: 24px;
 `;
 const HamburgerInner = styled.div`
-  background-color: ${colors.redd};
+  background-color: var(--themeColor);
   position: absolute;
   width: ${theme.hamburgerWidth}px;
   height: 2px;
@@ -104,7 +107,7 @@ const HamburgerInner = styled.div`
   &:after {
     content: '';
     display: block;
-    background-color: ${colors.redd};
+    background-color: var(--themeColor);
     position: absolute;
     left: auto;
     right: 0;
@@ -129,7 +132,7 @@ const HamburgerInner = styled.div`
   }
 `;
 const NavLinks = styled.div`
-  color: ${colors.redd};
+  color: var(--textSlate);
   display: flex;
   align-items: center;
   ${media.tablet`display: none;`};
@@ -147,7 +150,7 @@ const NavListItem = styled.li`
   &:before {
     content: '0' counter(item) '.';
     text-align: right;
-    color: ${colors.redd};
+    color: var(--textSlate);
     font-size: ${fontSizes.xsmall};
   }
 `;
@@ -240,7 +243,10 @@ class Header extends Component {
   handleMenuClick = e => {
     const target = e.target;
     const isLink = target.hasAttribute('href');
-    const isContainer = target.classList && target.classList[0].includes('MenuContainer');
+    let isContainer;
+    if (target.classList[0]) {
+      isContainer = target.classList && target.classList[0].includes('MenuContainer');
+    }
 
     if (isLink || isContainer) {
       this.toggleMenu();
@@ -302,6 +308,24 @@ class Header extends Component {
               {isMounted && (
                 <CSSTransition classNames="fadedown" timeout={3000}>
                   <div style={{ transitionDelay: `600ms` }}>
+                    <ThemeToggler>
+                      {({ theme, toggleTheme }) => {
+                        if (theme === null) {
+                          return null;
+                        }
+                        return (
+                          <label style={{ marginRight: `10px` }}>
+                            <input
+                              type="checkbox"
+                              hidden
+                              onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
+                              checked={theme === 'dark'}
+                            />
+                            <FontAwesomeIcon icon={theme === 'dark' ? faMoon : faSun} />
+                          </label>
+                        );
+                      }}
+                    </ThemeToggler>
                     <ResumeLink href={resume} target="_blank" rel="nofollow noopener noreferrer">
                       Resume
                     </ResumeLink>

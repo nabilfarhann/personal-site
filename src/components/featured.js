@@ -39,14 +39,14 @@ const ProjectName = styled.h5`
   font-size: 28px;
   font-weight: 600;
   margin: 0 0 20px;
-  color: ${colors.redd};
+  color: var(--themeColor);
   ${media.tablet`font-size: 24px;`};
   a {
     ${media.tablet`display: block;`};
   }
 `;
 const ProjectDescription = styled.div`
-  background-color: ${colors.redd};
+  background-color: var(--projectColor);
   color: ${colors.almostblack};
   padding: 25px;
   border-radius: ${theme.borderRadius};
@@ -54,7 +54,7 @@ const ProjectDescription = styled.div`
   ${media.thone`
     background-color: transparent;
     padding: 20px 0;
-    color: ${colors.redd};
+    color: var(--themeColor);
   `};
   p {
     margin: 0;
@@ -71,7 +71,7 @@ const TechList = styled.ul`
   li {
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.smallish};
-    color: ${colors.redd};
+    color: var(--themeColor);
     margin-right: ${theme.margin};
     margin-bottom: 7px;
     white-space: nowrap;
@@ -79,13 +79,13 @@ const TechList = styled.ul`
       margin-right: 0;
     }
     ${media.thone`
-      color: ${colors.redd};
+      color: var(--themeColor);
       margin-right: 10px;
     `};
   }
 `;
 const Links = styled.div`
-  color: ${colors.redd};
+  color: var(--themeColor);
   display: flex;
   align-items: center;
   position: relative;

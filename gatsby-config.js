@@ -13,11 +13,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
+    'gatsby-plugin-dark-mode',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'BrittanyChiang',
-        short_name: 'BrittanyChiang',
+        name: 'NabilFarhan',
+        short_name: 'NabilFarhan',
         start_url: '/',
         background_color: config.darkNavyColor,
         theme_color: config.navyColor,

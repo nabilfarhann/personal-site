@@ -36,12 +36,12 @@ const Skill = styled.li`
   padding-left: 20px;
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smallish};
-  color: ${colors.redd};
+  color: var(--themeColor);
   &:before {
     content: '▹';
     position: absolute;
     left: 0;
-    color: ${colors.redd};
+    color: var(--themeColor);
     font-size: ${fontSizes.small};
     line-height: 12px;
   }
@@ -97,7 +97,7 @@ const AvatarContainer = styled.div`
     mix-blend-mode: screen;
   }
   &:after {
-    border: 2px solid ${colors.redd};
+    border: 2px solid var(--themeColor);
     top: 20px;
     left: 20px;
     z-index: -1;

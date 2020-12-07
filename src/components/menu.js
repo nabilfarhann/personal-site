@@ -24,7 +24,7 @@ const MenuContainer = styled.div`
 const Sidebar = styled.div`
   ${mixins.flexCenter};
   flex-direction: column;
-  background-color: ${colors.almostblack};
+  background-color: var(--bg);
   padding: 50px;
   width: 50vw;
   height: 100%;
@@ -58,7 +58,7 @@ const NavListItem = styled.li`
   &:before {
     display: block;
     content: '0' counter(item) '.';
-    color: ${colors.redd};
+    color: var(--themeColor);
     font-size: ${fontSizes.small};
     margin-bottom: 5px;
   }

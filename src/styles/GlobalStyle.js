@@ -144,6 +144,14 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    --bg: ${colors.almostblack};
+    --textNormal: ${colors.slate};
+    --textSlate: ${colors.redd};
+    --textSlateSecond: ${colors.spotifyblack};
+    --themeColor: ${colors.redd};
+    --projectColor: ${colors.redd};
+    --lightSlate: ${colors.lightSlate};
+
     margin: 0;
     width: 100%;
     min-height: 100%;
@@ -152,6 +160,42 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background-color: ${colors.almostblack};
     color: ${colors.slate};
+    line-height: 1.3;
+    font-family: ${fonts.Calibre};
+    font-size: ${fontSizes.xlarge};
+    ${media.phablet`font-size: ${fontSizes.large};`}
+
+    &.hidden {
+      overflow: hidden;
+    }
+    &.blur {
+      overflow: hidden;
+      #root > .container > * {
+        filter: blur(5px) brightness(0.7);
+        transition: ${theme.transition};
+        pointer-events: none;
+        user-select: none;
+      }
+    }
+  }
+
+  body.dark {
+    --bg: ${colors.darkThemeMain};
+    --textNormal: ${colors.darkThemeText};
+    --textSlate: ${colors.darkThemeSlate};
+    --textSlateSecond: ${colors.darkThemeText};
+    --themeColor: ${colors.darkThemeSlate};
+    --projectColor: ${colors.darkThemeProject};
+    --lightSlate: ${colors.darkThemeLightSlate};
+
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: ${colors.darkThemeMain};
+    color: ${colors.darkThemeText};
     line-height: 1.3;
     font-family: ${fonts.Calibre};
     font-size: ${fontSizes.xlarge};
@@ -181,7 +225,7 @@ const GlobalStyle = createGlobalStyle`
   h4,
   h5 {
     font-weight: 600;
-    color: ${colors.white};
+    color: var(--themeColor);
     margin: 0 0 10px 0;
   }
 
@@ -217,7 +261,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: ${colors.redd};
+      color: var(--themeColor);
       outline: 0;
     }
   }

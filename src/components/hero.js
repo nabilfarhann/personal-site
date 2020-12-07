@@ -4,7 +4,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { email } from '../config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section } from '../styles';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const HeroContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -17,7 +17,7 @@ const HeroContainer = styled(Section)`
   }
 `;
 const Hi = styled.h1`
-  color: ${colors.redd};
+  color: var(--textSlate);
   margin: 0 0 20px 3px;
   font-size: ${fontSizes.medium};
   font-family: ${fonts.SFMono};
@@ -26,6 +26,7 @@ const Hi = styled.h1`
   ${media.tablet`font-size: ${fontSizes.smallish};`};
 `;
 const Name = styled.h2`
+  color: var(--textSlate);
   font-size: 80px;
   line-height: 1.1;
   margin: 0;
@@ -37,7 +38,7 @@ const Name = styled.h2`
 const Subtitle = styled.h3`
   font-size: 80px;
   line-height: 1.1;
-  color: ${colors.spotifyblack};
+  color: var(--textSlateSecond);
   ${media.desktop`font-size: 70px;`};
   ${media.tablet`font-size: 60px;`};
   ${media.phablet`font-size: 44px;`};

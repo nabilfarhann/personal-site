@@ -40,7 +40,7 @@ const ProjectInner = styled.div`
   height: 100%;
   border-radius: ${theme.borderRadius};
   transition: ${theme.transition};
-  background-color: ${colors.redd};
+  background-color: var(--projectColor);
 `;
 
 const ProjectImage = styled.div`
@@ -54,7 +54,7 @@ const Project = styled.div`
     outline: 0;
     ${ProjectInner} {
       transform: translateY(-5px);
-      box-shadow: 0 2px 4px ${colors.redd};
+      box-shadow: 0 2px 4px var(--themeColor);
       box-shadow: 0 19px 38px ${colors.darkestNavy} 0 15px 12px ${colors.shadowNavy};
     }
   }
@@ -196,7 +196,7 @@ class Projects extends Component {
                             </Links>
                           </ProjectHeader>
                           <ProjectImage>
-                            <Img className='card-image-top' fluid={cover.childImageSharp.fluid} />
+                            <Img className="card-image-top" fluid={cover.childImageSharp.fluid} />
                           </ProjectImage>
                           <ProjectName>
                             {external ? (

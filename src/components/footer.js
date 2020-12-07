@@ -9,7 +9,7 @@ const FooterContainer = styled.footer`
   ${mixins.flexCenter};
   flex-direction: column;
   padding: 15px;
-  background-color: ${colors.almostblack};
+  background-color: var(--bg);
   color: ${colors.slate};
   text-align: center;
   height: auto;
