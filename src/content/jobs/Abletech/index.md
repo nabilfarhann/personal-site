@@ -3,7 +3,7 @@ date: '2020-07-06'
 title: 'Fullstack Developer'
 company: 'Abletech Solutions Sdn Bhd'
 location: 'Kuala Lumpur, Malaysia'
-range: 'July 2020 - Present'
+range: 'July 2020 - April 2021'
 url: 'https://subplace.com/'
 ---
 
